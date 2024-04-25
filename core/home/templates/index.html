@@ -1,0 +1,44 @@
+
+
+
+  {% extends "base/base.html" %}
+  {% block start  %}
+    <div class="container">
+        <h1>this is template </h1>
+
+        <a href="/contact/">Contact</a>
+        |
+        <a href="/about/">about</a>
+        |
+        <a href="/receipe/">receipe</a>
+        |
+        <a href="/register/">register</a>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro enim nesciunt quas adipisci iure, voluptate voluptatum rerum eius minima illo ex unde quam repudiandae error. Cupiditate iusto aliquid voluptate animi.
+        </p>
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    
+                  <tr>
+                    <th scope="col">Serial No:</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">age</th>
+                  </tr>
+                  
+                </thead>
+                <tbody>
+                    {% for people in peoples %}
+                  <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{people.name}}</td>
+                    <td>{{people.age}}</td>
+                  </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+
+</div>
+{% endblock  %}

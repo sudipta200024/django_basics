@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+ <!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+          background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+          height: 300px;
+          "></div>
+    <!-- Background image -->
+  
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            |
+        <a href="/">home</a>
+
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form  method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              {% if messages %}
+              <ul class="messages">
+                  {% for message in messages %}
+                  <div class="alert alert-danger" role="alert">
+                    {{message}}
+                  </div>
+                  {% endfor %}
+              </ul>
+              {% endif %}
+              
+
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="form3Example1" name="first_name" class="form-control" />
+                    <label class="form-label"  for="form3Example1">First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" name="last_name" id="form3Example2" class="form-control" />
+                    <label class="form-label"   for="form3Example2">Last name</label>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Email input -->
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text"  name="username" id="form3Example4" class="form-control" />
+                <label class="form-label"  for="form3Example4">Username</label>
+              </div>
+  
+              <!-- Password input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" name= "password" id="form3Example4" class="form-control" />
+                <label class="form-label"  for="form3Example4">Password</label>
+              </div>
+  
+              {% comment %} <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                <label class="form-check-label" for="form2Example33">
+                  Subscribe to our newsletter
+                </label>
+              </div> {% endcomment %}
+  
+              <!-- Submit button -->
+              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+              <div class="text-center">
+                <p>Not a member? <a href="/login/">login</a></p>
+              </div>
+  
+              <!-- Register buttons -->
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
